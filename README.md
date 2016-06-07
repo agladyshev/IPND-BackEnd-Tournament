@@ -21,6 +21,13 @@ List of contents:
         
 Instructions:
 
-1. Create database "tournament" with tournament.sql
-2. To test main functions, execute in python "tournament_test.py"
-3. To play the game, execute in python file "UI.py"
+1. Install [Vagrant](https://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/)
+2. Clone the [fullstack-nanodegree-vm](https://github.com/udacity/fullstack-nanodegree-vm) repository
+3. Launch the Vagrant VM (`vagrant up`) and connect to VM (`vagrant ssh`)
+4. Navigate to tournament project folder `cd /vagrant/tournament`
+5. Write `psql` to go to PostgreSQL
+6. Run `\i tournament.sql` to create and import the tournament database schema
+7. Once the database has been setup, quit the PostgreSQL interface using `\q`
+8. Execute the following command  `python tournament_test.py` to test the main methods implemented in tournament.py
+9. Test results will be printed on the screen
+10. Execute the following command `python UI.py` to play the game based on Swiss tournament system
