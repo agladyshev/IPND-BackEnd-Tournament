@@ -44,8 +44,9 @@ def testCount():
     if c != 0:
         raise ValueError(
             "After deletion, countPlayers should return zero.")
-    print """4. countPlayers() returns zero after registered players are
-     deleted.\n5. Player records successfully deleted."""
+    print (
+        "4. countPlayers() returns zero after registered players are"
+        " deleted.\n5. Player records successfully deleted.")
 
 
 def testStandingsBeforeMatches():
@@ -77,8 +78,9 @@ def testStandingsBeforeMatches():
         raise ValueError(
             "Registered players' names should appear in standings, "
             "even if they have no matches played.")
-    print """
-    6. Newly registered players appear in the standings with no matches."""
+    print (
+        "6. Newly registered players appear in the"
+        " standings with no matches.")
 
 
 def testReportMatches():
@@ -125,14 +127,15 @@ def testReportMatches():
             raise ValueError(
                 "After deleting matches, players should have"
                 " zero wins recorded.")
-    print """8. After match deletion, player standings are properly reset.\n9.
-     Matches are properly deleted."""
+    print (
+        "8. After match deletion, player standings are properly reset.\n9."
+        " Matches are properly deleted.")
 
 
 def testPairings():
     """
     Test that pairings are generated properly
-     both before and after match reporting.
+    both before and after match reporting.
     """
     deleteTournaments()
     deletePlayers()
@@ -189,7 +192,8 @@ def testPairings():
 
 
 def testNoRematches():
-    """Test that there are no rematches.
+    """
+    Test that there are no rematches.
     Make isRematch return False all the time to test.
     """
     i = 0
