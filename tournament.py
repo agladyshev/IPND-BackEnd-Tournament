@@ -64,7 +64,7 @@ def countPlayers():
     db, cursor = connect()
     cursor.execute(
         "SELECT count(*) FROM players")
-    count = int(cursor.fetchall()[0][0])
+    count = int(cursor.fetchone()[0])
     db.close()
     return count
 
@@ -76,7 +76,7 @@ def countMatches():
     db, cursor = connect()
     cursor.execute(
         "SELECT count(*) FROM matches")
-    matches_count = int(cursor.fetchall()[0][0])
+    matches_count = int(cursor.fetchone()[0])
     db.close()
     return matches_count
 
@@ -88,7 +88,7 @@ def countMatchesTournament(tournament_id):
     db, cursor = connect()
     cursor.execute(
         "SELECT count(*) FROM matches WHERE tournament = %s", (tournament_id,))
-    matches_count = int(cursor.fetchall()[0][0])
+    matches_count = int(cursor.fetchone()[0])
     db.close()
     return matches_count
 
@@ -113,7 +113,7 @@ def countPlayersTournament(tournament_id):
     cursor.execute(
         "SELECT count(*) FROM standings WHERE tournament = %s",
         (tournament_id,))
-    count = int(cursor.fetchall()[0][0])
+    count = int(cursor.fetchone()[0])
     db.close()
     return count
 
