@@ -1,3 +1,10 @@
+DROP DATABASE IF EXISTS tournament;
+CREATE DATABASE tournament;
+
+
+\c tournament
+
+
 CREATE TABLE tournaments (
     id serial PRIMARY KEY,
     title text NOT NULL
